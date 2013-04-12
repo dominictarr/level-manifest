@@ -1,7 +1,7 @@
 {
   "name": "level-manifest",
   "description": "describe a levelup plugin for remote access",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "homepage": "https://github.com/dominictarr/level-manifest",
   "repository": {
     "type": "git",
