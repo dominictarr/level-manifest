@@ -50,7 +50,7 @@ test('recursive', function (t) {
   var db = {
     methods: readOnly,
     sublevels: {
-      foo: {},
+      foo: {methods: {}},
       bar: {methods: readOnly}
     }
   }
@@ -119,4 +119,9 @@ test('blank defaults', function (t) {
   t.end()
 })
 
+test('sets methods', function (t) {
+  var m = manifest({})
+  t.ok(m.methods)
+  t.end()
 
+})
