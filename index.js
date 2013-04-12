@@ -32,11 +32,10 @@ function getMethods (db) {
 
 module.exports = function manifest (db, terse) {
   var man = {}
-  if(db.methods)
-    man.methods = {}
-  if(!terse)
+  if(db.methods || !terse) man.methods = {}
+  if(!terse) {
     deepExtend(deepExtend(man.methods, methods), db.methods)
-  else
+  } else
     deepExtend(man.methods, db.methods)
 
   if(db.sublevels) {
