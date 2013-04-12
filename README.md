@@ -33,7 +33,8 @@ Plugins extending a sublevel should add a `methods` property that describes
 any new methods that can be used by a remote client.
 
 for example, the default methods are specified like this:
-```
+
+``` js
 var methods = {
   createReadStream  : {type: 'readable'},
   readStream        : {type: 'readable'},
