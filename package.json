@@ -1,0 +1,21 @@
+{
+  "name": "level-manifest",
+  "description": "describe a levelup plugin for remote access",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dominictarr/level-manifest",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/level-manifest.git"
+  },
+  "dependencies": {
+    "deep-extend": "~0.2.5"
+  },
+  "devDependencies": {
+    "tape": "~0.3.3"
+  },
+  "scripts": {
+    "test": "set -e; for t in test/*.js; do node $t; done"
+  },
+  "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
+  "license": "MIT"
+}
