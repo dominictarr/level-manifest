@@ -38,6 +38,11 @@ module.exports = function manifest (db, terse) {
   } else
     deepExtend(man.methods, db.methods)
 
+  if(db._sep)
+    man._sep = _sep
+  if(db._prefix)
+    man._prefix = db._prefix
+
   if(db.sublevels) {
     man.sublevels = {}
     for(var name in db.sublevels) {
