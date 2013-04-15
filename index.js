@@ -39,7 +39,7 @@ module.exports = function manifest (db, terse) {
     deepExtend(man.methods, db.methods)
 
   if(db._sep)
-    man._sep = _sep
+    man._sep = db._sep
   if(db._prefix)
     man._prefix = db._prefix
 
