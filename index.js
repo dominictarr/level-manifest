@@ -25,11 +25,6 @@ var methods = {
 //error means that this method is disabled in the client
 //the client should throw
 
-function getMethods (db) {
-  var _methods = db.methods || {}
-  return merge(merge({}, methods), _methods)
-}
-
 module.exports = function manifest (db, terse) {
   var man = {}
   if(db.methods || !terse) man.methods = {}
