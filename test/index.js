@@ -125,3 +125,32 @@ test('sets methods', function (t) {
   t.end()
 
 })
+
+test('nested objects', function (t) {
+
+  var error = {type: 'error', message: 'read-only'}
+  var nested = {type: 'object', methods: {get: error}}
+
+  var readOnly = {
+        put              : error,
+        del              : error,
+        batch            : error,
+        writeStream      : error,
+        createWriteStream: error,
+        nested           : nested
+      }
+
+  var db = {
+    methods: readOnly,
+    sublevels: {foo: {methods: readOnly}}
+  }
+
+  var m = manifest(db)
+
+  t.deepEqual(m.methods.nested, nested)
+  t.deepEqual(m.sublevels.foo.methods.nested, nested)
+
+  console.log(inspect(m, false, 10))
+
+  t.end()
+})
