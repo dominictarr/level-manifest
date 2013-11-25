@@ -61,7 +61,8 @@ A client should also provide support for these types:
 ``` js
 var other = {
   error        : {type: 'error', message: 'not-supported'},
-  createStream : {type: 'duplex'}
+  createStream : {type: 'duplex'},
+  nested       : {type: 'object', methods: {get: {type: 'async'}}}
 }
 ```
 `error` is used when a method has been disabled.

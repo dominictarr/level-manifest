@@ -20,7 +20,7 @@ var methods = {
 }
 
 //valid types:
-//readable, writable, duplex, sync, async, error
+//readable, writable, duplex, sync, async, error, object
 
 //error means that this method is disabled in the client
 //the client should throw
