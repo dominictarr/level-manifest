@@ -2,6 +2,8 @@
 
 Describe the functions that multilevel should provide access to on the client.
 
+[![Build Status](https://travis-ci.org/dominictarr/level-manifest.png?branch=master)](https://travis-ci.org/dominictarr/level-manifest)
+
 ## Example
 
 Suppose you implement a levelup plugin that adds some cool new features to a
