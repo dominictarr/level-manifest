@@ -8,8 +8,6 @@ var methods = {
   valueStream       : {type: 'readable'},
   createKeyStream   : {type: 'readable'},
   keyStream         : {type: 'readable'},
-  createWriteStream : {type: 'writable'},
-  writeStream       : {type: 'writable'},
   isOpen            : {type: 'sync'},
   isClosed          : {type: 'sync'},
   put               : {type: 'async'},
