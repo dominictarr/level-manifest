@@ -69,6 +69,11 @@ test('terse: blank defaults', function (t) {
 
   var error = {type: 'error', message: 'read-only'}
 
+  var options = {
+        keyEncoding      : 'utf8',
+        valueEncoding    : 'utf8'
+      }
+
   var readOnly = {
         put              : error,
         del              : error,
@@ -78,10 +83,12 @@ test('terse: blank defaults', function (t) {
       }
 
   var db = {
+    options: options,
     methods: readOnly,
     sublevels: {
       foo: {},
-      bar: {methods: readOnly}
+      bar: {methods: readOnly},
+      baz: {options: options}
     }
   }
 
@@ -97,6 +104,11 @@ test('blank defaults', function (t) {
 
   var error = {type: 'error', message: 'read-only'}
 
+  var options = {
+        keyEncoding      : 'utf8',
+        valueEncoding    : 'utf8'
+      }
+
   var readOnly = {
         put              : error,
         del              : error,
@@ -106,10 +118,12 @@ test('blank defaults', function (t) {
       }
 
   var db = {
+    options: options,
     methods: readOnly,
     sublevels: {
       foo: {},
-      bar: {methods: readOnly}
+      bar: {methods: readOnly},
+      baz: {options: options}
     }
   }
 
