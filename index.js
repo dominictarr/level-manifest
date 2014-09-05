@@ -25,6 +25,10 @@ var methods = {
 
 module.exports = function manifest (db, terse) {
   var man = {}
+
+  if(db.options)
+    man.options = db.options
+
   if(db.methods || !terse) man.methods = {}
   if(!terse) {
     deepExtend(deepExtend(man.methods, methods), db.methods)
