@@ -14,7 +14,8 @@ var methods = {
   get               : {type: 'async'},
   del               : {type: 'async'},
   batch             : {type: 'async'},
-  approximateSize   : {type: 'async'}
+  approximateSize   : {type: 'async'},
+  close             : {type: 'async'}
 }
 
 //valid types:
